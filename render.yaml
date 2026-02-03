@@ -5,7 +5,7 @@ services:
     env: node
     plan: free
     buildCommand: "npm install"
-    startCommand: "npm start"
+    startCommand: "node server-simple.js"
     healthCheckPath: /signup-pro.html
     envVars:
       - key: NODE_ENV
@@ -20,7 +20,7 @@ services:
     buildFilter:
       paths:
         - website/**
-        - server.js
+        - server-simple.js
         - package.json
         - render.yaml
     
