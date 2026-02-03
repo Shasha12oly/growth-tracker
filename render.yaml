@@ -1,0 +1,34 @@
+services:
+  # Production Web Service
+  - type: web
+    name: growth-tracker-pro
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    healthCheckPath: /signup-pro.html
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    
+    # Auto-deploy configuration
+    autoDeploy: true
+    
+    # Build and runtime settings
+    buildFilter:
+      paths:
+        - website/**
+        - server.js
+        - package.json
+        - render.yaml
+    
+    # Performance optimizations
+    disk:
+      name: growth-tracker-disk
+      mountPath: /opt/render/project/src
+      sizeGB: 1
+
+# Global settings
+version: "1"

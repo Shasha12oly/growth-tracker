@@ -1,0 +1,33 @@
+{
+  "name": "growth-tracker-pro",
+  "version": "1.0.0",
+  "description": "A modern personal growth tracking web application",
+  "main": "server.js",
+  "scripts": {
+    "start": "set NODE_ENV=production&& node server.js",
+    "dev": "set NODE_ENV=development&& node server.js",
+    "build": "echo 'Static build - no build step required'",
+    "install-all": "npm install",
+    "test": "echo 'No tests specified' && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "keywords": [
+    "growth",
+    "tracking",
+    "habits",
+    "personal-development",
+    "web-app",
+    "static-site"
+  ],
+  "author": "Growth Tracker Pro Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/growth-tracker-pro.git"
+  }
+}
